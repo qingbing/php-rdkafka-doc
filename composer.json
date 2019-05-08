@@ -1,0 +1,25 @@
+{
+  "name": "qingbing/php-doc-rdkafka",
+  "description": "php-rdkafka，编码提示api文档",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "rdkafka",
+    "doc",
+    "php-rdkafka",
+    "rdkafka-api",
+    "document"
+  ],
+  "homepage": "http://www.phpcorner.net",
+  "authors": [
+    {
+      "name": "qingbing",
+      "email": "780042175@qq.com"
+    }
+  ],
+  "require": {},
+  "autoload": {},
+  "autoload-dev": {},
+  "repositories": {}
+}
