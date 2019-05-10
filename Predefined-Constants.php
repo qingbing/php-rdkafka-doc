@@ -20,6 +20,9 @@ defined('RD_KAFKA_PRODUCER') or define('RD_KAFKA_PRODUCER', 0);
 // Err-16777471?
 defined('RD_KAFKA_VERSION') or define('RD_KAFKA_VERSION', 16777471);
 
+// Err-16777471?
+defined('RD_KAFKA_BUILD_VERSION') or define('RD_KAFKA_BUILD_VERSION', 16777471);
+
 // Err--200?
 defined('RD_KAFKA_RESP_ERR__BEGIN') or define('RD_KAFKA_RESP_ERR__BEGIN', -200);
 
@@ -119,11 +122,77 @@ defined('RD_KAFKA_RESP_ERR__AUTHENTICATION') or define('RD_KAFKA_RESP_ERR__AUTHE
 // Local: No offset stored
 defined('RD_KAFKA_RESP_ERR__NO_OFFSET') or define('RD_KAFKA_RESP_ERR__NO_OFFSET', -168);
 
+// Local: Outdated
+defined('RD_KAFKA_RESP_ERR__OUTDATED') or define('RD_KAFKA_RESP_ERR__OUTDATED', -167);
+
+// Local: Timed out in queue
+defined('RD_KAFKA_RESP_ERR__TIMED_OUT_QUEUE') or define('RD_KAFKA_RESP_ERR__TIMED_OUT_QUEUE', -166);
+
+// Local: Required feature not supported by broker
+defined('RD_KAFKA_RESP_ERR__UNSUPPORTED_FEATURE') or define('RD_KAFKA_RESP_ERR__UNSUPPORTED_FEATURE', -165);
+
+// Local: Awaiting cache update
+defined('RD_KAFKA_RESP_ERR__WAIT_CACHE') or define('RD_KAFKA_RESP_ERR__WAIT_CACHE', -164);
+
+// Local: Operation interrupted
+defined('RD_KAFKA_RESP_ERR__INTR') or define('RD_KAFKA_RESP_ERR__INTR', -163);
+
+// Local: Key serialization error
+defined('RD_KAFKA_RESP_ERR__KEY_SERIALIZATION') or define('RD_KAFKA_RESP_ERR__KEY_SERIALIZATION', -162);
+
+// Local: Value serialization error
+defined('RD_KAFKA_RESP_ERR__VALUE_SERIALIZATION') or define('RD_KAFKA_RESP_ERR__VALUE_SERIALIZATION', -161);
+
+// Local: Key deserialization error
+defined('RD_KAFKA_RESP_ERR__KEY_DESERIALIZATION') or define('RD_KAFKA_RESP_ERR__KEY_DESERIALIZATION', -160);
+
+// Local: Value deserialization error
+defined('RD_KAFKA_RESP_ERR__VALUE_DESERIALIZATION') or define('RD_KAFKA_RESP_ERR__VALUE_DESERIALIZATION', -159);
+
+// Local: Partial response
+defined('RD_KAFKA_RESP_ERR__PARTIAL') or define('RD_KAFKA_RESP_ERR__PARTIAL', -158);
+
+// Local: Read-only object
+defined('RD_KAFKA_RESP_ERR__READ_ONLY') or define('RD_KAFKA_RESP_ERR__READ_ONLY', -157);
+
+// Local: No such entry
+defined('RD_KAFKA_RESP_ERR__NOENT') or define('RD_KAFKA_RESP_ERR__NOENT', -156);
+
+// Local: Read underflow
+defined('RD_KAFKA_RESP_ERR__UNDERFLOW') or define('RD_KAFKA_RESP_ERR__UNDERFLOW', -155);
+
+// Local: Invalid type
+defined('RD_KAFKA_RESP_ERR__INVALID_TYPE') or define('RD_KAFKA_RESP_ERR__INVALID_TYPE', -154);
+
+// Local: Retry operation
+defined('RD_KAFKA_RESP_ERR__RETRY') or define('RD_KAFKA_RESP_ERR__RETRY', -153);
+
+// Local: Purged in queue
+defined('RD_KAFKA_RESP_ERR__PURGE_QUEUE') or define('RD_KAFKA_RESP_ERR__PURGE_QUEUE', -152);
+
+// Local: Purged in flight
+defined('RD_KAFKA_RESP_ERR__PURGE_INFLIGHT') or define('RD_KAFKA_RESP_ERR__PURGE_INFLIGHT', -151);
+
+// Local: Fatal error
+defined('RD_KAFKA_RESP_ERR__FATAL') or define('RD_KAFKA_RESP_ERR__FATAL', -150);
+
+// Local: Inconsistent state
+defined('RD_KAFKA_RESP_ERR__INCONSISTENT') or define('RD_KAFKA_RESP_ERR__INCONSISTENT', -149);
+
+// Local: Gap-less ordering would not be guaranteed if proceeding
+defined('RD_KAFKA_RESP_ERR__GAPLESS_GUARANTEE') or define('RD_KAFKA_RESP_ERR__GAPLESS_GUARANTEE', -148);
+
+// Local: Maximum application poll interval (max.poll.interval.ms) exceeded
+defined('RD_KAFKA_RESP_ERR__MAX_POLL_EXCEEDED') or define('RD_KAFKA_RESP_ERR__MAX_POLL_EXCEEDED', -147);
+
 // Err--100?
 defined('RD_KAFKA_RESP_ERR__END') or define('RD_KAFKA_RESP_ERR__END', -100);
 
 // Unknown broker error
 defined('RD_KAFKA_RESP_ERR_UNKNOWN') or define('RD_KAFKA_RESP_ERR_UNKNOWN', -1);
+
+// Success
+defined('RD_KAFKA_RESP_ERR_NO_ERROR') or define('RD_KAFKA_RESP_ERR_NO_ERROR', 0);
 
 // Broker: Offset out of range
 defined('RD_KAFKA_RESP_ERR_OFFSET_OUT_OF_RANGE') or define('RD_KAFKA_RESP_ERR_OFFSET_OUT_OF_RANGE', 1);
@@ -218,6 +287,135 @@ defined('RD_KAFKA_RESP_ERR_GROUP_AUTHORIZATION_FAILED') or define('RD_KAFKA_RESP
 // Broker: Cluster authorization failed
 defined('RD_KAFKA_RESP_ERR_CLUSTER_AUTHORIZATION_FAILED') or define('RD_KAFKA_RESP_ERR_CLUSTER_AUTHORIZATION_FAILED', 31);
 
+// Broker: Invalid timestamp
+defined('RD_KAFKA_RESP_ERR_INVALID_TIMESTAMP') or define('RD_KAFKA_RESP_ERR_INVALID_TIMESTAMP', 32);
+
+// Broker: Unsupported SASL mechanism
+defined('RD_KAFKA_RESP_ERR_UNSUPPORTED_SASL_MECHANISM') or define('RD_KAFKA_RESP_ERR_UNSUPPORTED_SASL_MECHANISM', 33);
+
+// Broker: Request not valid in current SASL state
+defined('RD_KAFKA_RESP_ERR_ILLEGAL_SASL_STATE') or define('RD_KAFKA_RESP_ERR_ILLEGAL_SASL_STATE', 34);
+
+// Broker: API version not supported
+defined('RD_KAFKA_RESP_ERR_UNSUPPORTED_VERSION') or define('RD_KAFKA_RESP_ERR_UNSUPPORTED_VERSION', 35);
+
+// Broker: Topic already exists
+defined('RD_KAFKA_RESP_ERR_TOPIC_ALREADY_EXISTS') or define('RD_KAFKA_RESP_ERR_TOPIC_ALREADY_EXISTS', 36);
+
+// Broker: Invalid number of partitions
+defined('RD_KAFKA_RESP_ERR_INVALID_PARTITIONS') or define('RD_KAFKA_RESP_ERR_INVALID_PARTITIONS', 37);
+
+// Broker: Invalid replication factor
+defined('RD_KAFKA_RESP_ERR_INVALID_REPLICATION_FACTOR') or define('RD_KAFKA_RESP_ERR_INVALID_REPLICATION_FACTOR', 38);
+
+// Broker: Invalid replica assignment
+defined('RD_KAFKA_RESP_ERR_INVALID_REPLICA_ASSIGNMENT') or define('RD_KAFKA_RESP_ERR_INVALID_REPLICA_ASSIGNMENT', 39);
+
+// Broker: Configuration is invalid
+defined('RD_KAFKA_RESP_ERR_INVALID_CONFIG') or define('RD_KAFKA_RESP_ERR_INVALID_CONFIG', 40);
+
+// Broker: Not controller for cluster
+defined('RD_KAFKA_RESP_ERR_NOT_CONTROLLER') or define('RD_KAFKA_RESP_ERR_NOT_CONTROLLER', 41);
+
+// Broker: Invalid request
+defined('RD_KAFKA_RESP_ERR_INVALID_REQUEST') or define('RD_KAFKA_RESP_ERR_INVALID_REQUEST', 42);
+
+// Broker: Message format on broker does not support request
+defined('RD_KAFKA_RESP_ERR_UNSUPPORTED_FOR_MESSAGE_FORMAT') or define('RD_KAFKA_RESP_ERR_UNSUPPORTED_FOR_MESSAGE_FORMAT', 43);
+
+// Broker: Policy violation
+defined('RD_KAFKA_RESP_ERR_POLICY_VIOLATION') or define('RD_KAFKA_RESP_ERR_POLICY_VIOLATION', 44);
+
+// Broker: Broker received an out of order sequence number
+defined('RD_KAFKA_RESP_ERR_OUT_OF_ORDER_SEQUENCE_NUMBER') or define('RD_KAFKA_RESP_ERR_OUT_OF_ORDER_SEQUENCE_NUMBER', 45);
+
+// Broker: Broker received a duplicate sequence number
+defined('RD_KAFKA_RESP_ERR_DUPLICATE_SEQUENCE_NUMBER') or define('RD_KAFKA_RESP_ERR_DUPLICATE_SEQUENCE_NUMBER', 46);
+
+// Broker: Producer attempted an operation with an old epoch
+defined('RD_KAFKA_RESP_ERR_INVALID_PRODUCER_EPOCH') or define('RD_KAFKA_RESP_ERR_INVALID_PRODUCER_EPOCH', 47);
+
+// Broker: Producer attempted a transactional operation in an invalid state
+defined('RD_KAFKA_RESP_ERR_INVALID_TXN_STATE') or define('RD_KAFKA_RESP_ERR_INVALID_TXN_STATE', 48);
+
+// Broker: Producer attempted to use a producer id which is not currently assigned to its transactional id
+defined('RD_KAFKA_RESP_ERR_INVALID_PRODUCER_ID_MAPPING') or define('RD_KAFKA_RESP_ERR_INVALID_PRODUCER_ID_MAPPING', 49);
+
+// Broker: Transaction timeout is larger than the maximum value allowed by the broker's max.transaction.timeout.ms
+defined('RD_KAFKA_RESP_ERR_INVALID_TRANSACTION_TIMEOUT') or define('RD_KAFKA_RESP_ERR_INVALID_TRANSACTION_TIMEOUT', 50);
+
+// Broker: Producer attempted to update a transaction while another concurrent operation on the same transaction was ongoing
+defined('RD_KAFKA_RESP_ERR_CONCURRENT_TRANSACTIONS') or define('RD_KAFKA_RESP_ERR_CONCURRENT_TRANSACTIONS', 51);
+
+// Broker: Indicates that the transaction coordinator sending a WriteTxnMarker is no longer the current coordinator for a given producer
+defined('RD_KAFKA_RESP_ERR_TRANSACTION_COORDINATOR_FENCED') or define('RD_KAFKA_RESP_ERR_TRANSACTION_COORDINATOR_FENCED', 52);
+
+// Broker: Transactional Id authorization failed
+defined('RD_KAFKA_RESP_ERR_TRANSACTIONAL_ID_AUTHORIZATION_FAILED') or define('RD_KAFKA_RESP_ERR_TRANSACTIONAL_ID_AUTHORIZATION_FAILED', 53);
+
+// Broker: Security features are disabled
+defined('RD_KAFKA_RESP_ERR_SECURITY_DISABLED') or define('RD_KAFKA_RESP_ERR_SECURITY_DISABLED', 54);
+
+// Broker: Operation not attempted
+defined('RD_KAFKA_RESP_ERR_OPERATION_NOT_ATTEMPTED') or define('RD_KAFKA_RESP_ERR_OPERATION_NOT_ATTEMPTED', 55);
+
+// Disk error when trying to access log file on the disk
+defined('RD_KAFKA_RESP_ERR_KAFKA_STORAGE_ERROR') or define('RD_KAFKA_RESP_ERR_KAFKA_STORAGE_ERROR', 56);
+
+// The user-specified log directory is not found in the broker config
+defined('RD_KAFKA_RESP_ERR_LOG_DIR_NOT_FOUND') or define('RD_KAFKA_RESP_ERR_LOG_DIR_NOT_FOUND', 57);
+
+// SASL Authentication failed
+defined('RD_KAFKA_RESP_ERR_SASL_AUTHENTICATION_FAILED') or define('RD_KAFKA_RESP_ERR_SASL_AUTHENTICATION_FAILED', 58);
+
+// Unknown Producer Id
+defined('RD_KAFKA_RESP_ERR_UNKNOWN_PRODUCER_ID') or define('RD_KAFKA_RESP_ERR_UNKNOWN_PRODUCER_ID', 59);
+
+// Partition reassignment is in progress
+defined('RD_KAFKA_RESP_ERR_REASSIGNMENT_IN_PROGRESS') or define('RD_KAFKA_RESP_ERR_REASSIGNMENT_IN_PROGRESS', 60);
+
+// Delegation Token feature is not enabled
+defined('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_AUTH_DISABLED') or define('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_AUTH_DISABLED', 61);
+
+// Delegation Token is not found on server
+defined('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_NOT_FOUND') or define('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_NOT_FOUND', 62);
+
+// Specified Principal is not valid Owner/Renewer
+defined('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_OWNER_MISMATCH') or define('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_OWNER_MISMATCH', 63);
+
+// Delegation Token requests are not allowed on this connection
+defined('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_REQUEST_NOT_ALLOWED') or define('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_REQUEST_NOT_ALLOWED', 64);
+
+// Delegation Token authorization failed
+defined('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_AUTHORIZATION_FAILED') or define('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_AUTHORIZATION_FAILED', 65);
+
+// Delegation Token is expired
+defined('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_EXPIRED') or define('RD_KAFKA_RESP_ERR_DELEGATION_TOKEN_EXPIRED', 66);
+
+// Supplied principalType is not supported
+defined('RD_KAFKA_RESP_ERR_INVALID_PRINCIPAL_TYPE') or define('RD_KAFKA_RESP_ERR_INVALID_PRINCIPAL_TYPE', 67);
+
+// The group is not empty
+defined('RD_KAFKA_RESP_ERR_NON_EMPTY_GROUP') or define('RD_KAFKA_RESP_ERR_NON_EMPTY_GROUP', 68);
+
+// The group id does not exist
+defined('RD_KAFKA_RESP_ERR_GROUP_ID_NOT_FOUND') or define('RD_KAFKA_RESP_ERR_GROUP_ID_NOT_FOUND', 69);
+
+// The fetch session ID was not found
+defined('RD_KAFKA_RESP_ERR_FETCH_SESSION_ID_NOT_FOUND') or define('RD_KAFKA_RESP_ERR_FETCH_SESSION_ID_NOT_FOUND', 70);
+
+// The fetch session epoch is invalid
+defined('RD_KAFKA_RESP_ERR_INVALID_FETCH_SESSION_EPOCH') or define('RD_KAFKA_RESP_ERR_INVALID_FETCH_SESSION_EPOCH', 71);
+
+// No matching listener
+defined('RD_KAFKA_RESP_ERR_LISTENER_NOT_FOUND') or define('RD_KAFKA_RESP_ERR_LISTENER_NOT_FOUND', 72);
+
+// Topic deletion is disabled
+defined('RD_KAFKA_RESP_ERR_TOPIC_DELETION_DISABLED') or define('RD_KAFKA_RESP_ERR_TOPIC_DELETION_DISABLED', 73);
+
+// Unsupported compression type
+defined('RD_KAFKA_RESP_ERR_UNSUPPORTED_COMPRESSION_TYPE') or define('RD_KAFKA_RESP_ERR_UNSUPPORTED_COMPRESSION_TYPE', 74);
+
 // Err--2?
 defined('RD_KAFKA_CONF_UNKNOWN') or define('RD_KAFKA_CONF_UNKNOWN', -2);
 
@@ -241,6 +439,3 @@ defined('RD_KAFKA_LOG_SYSLOG') or define('RD_KAFKA_LOG_SYSLOG', 101);
 
 // Err-102?
 defined('RD_KAFKA_LOG_SYSLOG_PRINT') or define('RD_KAFKA_LOG_SYSLOG_PRINT', 102);
-
-// Success
-defined('RD_KAFKA_RESP_ERR_NO_ERROR') or define('RD_KAFKA_RESP_ERR_NO_ERROR', 0);
